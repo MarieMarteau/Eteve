@@ -1,0 +1,196 @@
+
+body { 
+	margin: 0px;
+	background-image:url(background.jpg);
+}
+
+@keyframes apparitionStay {
+  from {
+        opacity:0;         
+    }
+    to   {
+        opacity:1;         
+    }
+}
+
+@keyframes disparition {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes apparition {
+  from {
+        opacity:0;         
+    }
+	25%  {
+        opacity:0.95;   
+    }
+    50%  {
+        opacity:1;   
+    }
+	75%  {
+        opacity:0.95;   
+    }
+    to   {
+        opacity:0;         
+    }
+}
+
+
+iframe{
+	width:100%;
+	height:120%;
+	position:absolute;
+	left:0%;
+	top:-20%;
+	border:none;
+	outline:none;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	animation-delay:6s;
+}
+
+
+#ContainerTexte1 { 
+	width:100%;
+	height:30%;
+	position:absolute;
+	left:0%;
+	bottom:0%;
+	border:none;
+	outline:none;
+	background-image:url(bas.png);
+	background-position: center;
+	background-color:rgba(258, 258, 258, 0.1);
+	background-size: cover;
+	font-family:Timeless;
+	text-align:center;
+	font-size:25px;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 1s;
+	animation-fill-mode:forwards;
+	animation-delay:6s;
+}
+
+#Texte1{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 7s;
+	animation-delay:6s;
+}
+
+#Texte2{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6s;
+	animation-delay:13s;
+}
+
+#Texte3{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6.5s;
+	animation-delay:19s;
+}
+
+#trainee{
+	height:7%;
+	position:absolute;
+	top: 40%;
+	right:4%;
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6.5s;
+	animation-delay:19s;
+}
+
+#trainee2{
+	height:7%;
+	position:absolute;
+	top: 30%;
+	right:4%;
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6.5s;
+	animation-delay:19s;
+}
+
+#Texte4{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:25.5s;
+}
+#portance{
+	width:3.5%;
+	position:absolute;
+	left: 50%;
+	top:35%;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:25.5s;
+}
+#portance2{
+	width:3.5%;
+	position:absolute;
+	left: 40%;
+	top:35%;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:25.5s;
+}
+
+#Titre{
+	position:absolute;
+	display: block;
+	width:100%;
+	height:10%;
+	left:0%;
+	top:45%;
+	font-family:Timeless;
+	font-size:50px;
+	text-align:center;
+	opacity:1;
+	animation-name: disparition;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay:4s;
+}
+
+#next{
+	height:40px;
+	position:absolute;
+	right:10%;
+	bottom:10%;
+	border:none;
+	outline:none;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:25.5s;
+}

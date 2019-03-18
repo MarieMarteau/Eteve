@@ -1,0 +1,174 @@
+body { 
+	margin: 0px;
+	background-image:url(background.jpg);
+}
+
+@keyframes apparitionStay {
+  from {
+        opacity:0;         
+    }
+    to   {
+        opacity:1;         
+    }
+}
+
+#eteve{
+	height:60%;
+	position:absolute;
+	left:35%;
+	top:5%;
+	border:none;
+	outline:none;
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 7s;
+	animation-delay:0s;
+}
+
+#bas{
+	height:40px;
+	position:absolute;
+	right:10%;
+	bottom:10%;
+	border:none;
+	outline:none;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:24s;
+}
+
+#indicateur{
+	height:60%;
+	position:absolute;
+	text-align:center;
+	top:5%;
+	left:30%;
+	border:none;
+	outline:none;
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 5s;
+	animation-delay:7s;
+}
+
+#AffichageScene3D{
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 5s;
+	animation-delay:12s;
+	animation-fill-mode:forwards;
+}
+
+#ContainerTexte1 { 
+	width:100%;
+	height:30%;
+	position:absolute;
+	left:0%;
+	bottom:0%;
+	border:none;
+	outline:none;
+	background-image:url(bas.png);
+	background-position: center;
+	background-color:rgba(258, 258, 258, 0.1);
+	background-size: cover;
+	font-family:Timeless;
+	text-align:center;
+	font-size:25px;
+}
+
+@keyframes apparition {
+  from {
+        opacity:0;         
+    }
+	25%  {
+        opacity:0.95;   
+    }
+    50%  {
+        opacity:1;   
+    }
+	75%  {
+        opacity:0.95;   
+    }
+    to   {
+        opacity:0;         
+    }
+}
+
+#Texte1{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 7s;
+	animation-delay:0s;
+}
+
+#Texte2{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 5s;
+	animation-delay:7s;
+}
+
+#Texte3{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6s;
+	animation-delay:12s;
+}
+#Texte4{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparition;
+	animation-duration: 6s;
+	animation-delay:18s;
+}
+#Texte5{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:24s;
+}
+
+#trainee{
+	height:7%;
+	position:absolute;
+	top: 15%;
+	left:6%;
+	opacity:0;
+	animation-name: apparition;
+	animation-duration:6s;
+	animation-delay:18s;
+}
+
+#rappel{
+	width:15%;
+	position:absolute;
+	left: 35%;
+	top:45%;
+	opacity:0;
+	animation-name: apparitionStay;
+	animation-duration: 2s;
+	animation-fill-mode:forwards;
+	animation-delay:24s;
+}

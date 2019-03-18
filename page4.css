@@ -1,0 +1,64 @@
+body{
+	margin:0px;
+}
+
+#ContainerTexte1 { 
+	width:100%;
+	height:30%;
+	position:absolute;
+	left:0%;
+	bottom:0%;
+	border:none;
+	outline:none;
+	background-image:url(bas.png);
+	background-position: center;
+	background-color:rgba(258, 258, 258, 0.1);
+	background-size: cover;
+	font-family:Timeless;
+	text-align:center;
+	font-size:25px;
+	
+	
+}
+
+#bas{
+	height:40px;
+	position:absolute;
+	right:10%;
+	bottom:10%;
+	border:none;
+	outline:none;
+}
+
+@keyframes apparition {
+  from {
+        opacity:0;         
+    }
+	25%  {
+        opacity:0.9;   
+    }
+    50%  {
+        opacity:1;   
+    }
+	75%  {
+        opacity:0.9;   
+    }
+    to   {
+        opacity:0;         
+    }
+}
+@keyframes apparitionStay {
+  from {
+        opacity:0;         
+    }
+    to   {
+        opacity:1;         
+    }
+}
+
+#Texte1{
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
