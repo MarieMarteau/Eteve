@@ -16,11 +16,21 @@ body {
 @keyframes reduce{
   from {
         width:3.5%;
+		height:25%;
 		opacity:1;
+    }
+	10%  {
+        width:3.5%;
+		height:25%;
+		opacity:1;
+    }
+	75%  {
+        opacity:0.85;   
     }
     to   {
 		opacity:0;
-        width:1%;         
+        width:3.5%;
+		height:10%;		
     }
 }
 
@@ -136,7 +146,7 @@ iframe{
 	width:3.5%;
 	position:absolute;
 	left: 50%;
-	top:35%;
+	bottom:45%;
 	animation-name: reduce;
 	animation-duration: 10s;
 	animation-fill-mode:forwards;
@@ -146,7 +156,7 @@ iframe{
 	width:3.5%;
 	position:absolute;
 	left: 40%;
-	top:35%;
+	bottom:45%;
 	opacity:0;
 	animation-name: reduce;
 	animation-duration: 10s;
