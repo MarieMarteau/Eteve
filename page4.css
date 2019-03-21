@@ -62,3 +62,10 @@ body{
 	top: 50%;
 	transform: translateY(-50%);
 }
+
+#home{
+	width:5%;
+	position:absolute;
+	left:2%;
+	top:2%;
+}

@@ -108,3 +108,10 @@ body {
 	animation-fill-mode:forwards;
 	animation-delay:28s;
 }
+
+#home{
+	width:5%;
+	position:absolute;
+	left:2%;
+	top:2%;
+}

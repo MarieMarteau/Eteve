@@ -163,3 +163,12 @@ iframe{
 	animation-fill-mode:forwards;
 	animation-delay:0s;
 }
+
+#home{
+	width:5%;
+	display:block;
+	position:absolute;
+	left:2%;
+	top:2%;
+	opacity:1;
+}
