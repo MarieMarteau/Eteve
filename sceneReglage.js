@@ -85,6 +85,7 @@ function init3DObjects(sceneGraph, pickingData) {
 	
 	const plaque = sceneGraph.getObjectByName("plaque");
 	const cylindreG=sceneGraph.getObjectByName("cylindreG");
+	pickingData.selectableObjects=[];
 	pickingData.selectableObjects.push(cylindreG);
 	
 }
