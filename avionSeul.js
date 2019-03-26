@@ -80,8 +80,7 @@ function init3DObjects(sceneGraph, pickingData) {
 
 	buildAvion(sceneGraph, pickingData);
 	const aile1 = sceneGraph.getObjectByName("aile1");
-	aile1.position.set(2,0,0);
-	
+	aile1.position.set(-1,0,0);
 }
 
 
@@ -97,9 +96,9 @@ function animate(sceneThreeJs, time,pickingData) {
 	
 	const skyBox = sceneThreeJs.sceneGraph.getObjectByName("skyBox");
 	const aile1 = sceneThreeJs.sceneGraph.getObjectByName("aile1");
-	skyBox.rotateY(0.003);
+	skyBox.rotateY(-0.003);
 	aile1.rotation.x = 0.01*Math.sin(t);
-	aile1.position.y = 0.6+0.01*Math.sin(10*t);    
+	aile1.position.y = 0.01*Math.sin(10*t);    
     render(sceneThreeJs);
 }
 

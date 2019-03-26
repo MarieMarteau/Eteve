@@ -86,46 +86,27 @@ iframe{
 }
 
 #Texte1{
-	width:100%;
-	position:absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	margin-top:2%;
 	opacity:0;
-	animation-name: apparition;
-	animation-duration: 8s;
+	animation-name: apparitionStay;
+	animation-fill-mode:forwards;
+	animation-duration: 2s;
 	animation-delay:0s;
 }
 
 #Texte2{
-	width:100%;
-	position:absolute;
-	top: 50%;
-	transform: translateY(-50%);
 	opacity:0;
 	animation-name: apparitionStay;
 	animation-fill-mode:forwards;
 	animation-duration: 2s;
-	animation-delay:8s;
-}
-#next{
-	height:40px;
-	position:absolute;
-	right:10%;
-	bottom:10%;
-	border:none;
-	outline:none;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 2s;
-	animation-fill-mode:forwards;
-	animation-delay:8s;
+	animation-delay:4s;
 }
 
 #trainee{
 	height:7%;
 	position:absolute;
-	top: 40%;
-	right:4%;
+	top: 35%;
+	left:4%;
 	animation-name: disparition;
 	animation-fill-mode:forwards;
 	animation-duration:2s;
@@ -135,8 +116,8 @@ iframe{
 #trainee2{
 	height:7%;
 	position:absolute;
-	top: 30%;
-	right:4%;
+	top: 20%;
+	left:4%;
 	animation-name: disparition;
 	animation-fill-mode:forwards;
 	animation-duration: 2s;
@@ -146,7 +127,7 @@ iframe{
 	width:3.5%;
 	position:absolute;
 	left: 50%;
-	bottom:45%;
+	bottom:50%;
 	animation-name: reduce;
 	animation-duration: 10s;
 	animation-fill-mode:forwards;
@@ -155,8 +136,8 @@ iframe{
 #portance2{
 	width:3.5%;
 	position:absolute;
-	left: 40%;
-	bottom:45%;
+	left: 60%;
+	bottom:50%;
 	opacity:0;
 	animation-name: reduce;
 	animation-duration: 10s;
@@ -171,4 +152,46 @@ iframe{
 	left:2%;
 	top:2%;
 	opacity:1;
+}
+
+#next{
+	position:absolute;
+	width:20%;
+	right:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	font-size:18px;
+}
+
+
+#page2{
+}
+#fleche2{
+	position:absolute;
+	width:30%;
+	right:0%;
+	bottom:0%;
+	visibility:visible;
+}
+
+#prev{
+	visibility:visible;
+	position:absolute;
+	width:20%;
+	left:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	text-align:right;
+	font-size:18px;
+}
+
+#flechePrev{
+	position:absolute;
+	width:30%;
+	left:0%;
+	bottom:0%;
 }

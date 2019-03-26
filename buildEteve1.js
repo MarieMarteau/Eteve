@@ -267,8 +267,8 @@ function buildAvion(sceneGraph,pickingData){
 	//roues
 	const roue1 = new THREE.Mesh( new THREE.CylinderGeometry( rRoue,rRoue,lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	roue1.rotateX(Math.PI/2);
-	roue1.position.set(0,rRoue/2+0.2,LFront);
-	aile2.add( roue1 );
+	roue1.position.set(0,-(rRoue/2+0.2),LFront);
+	aile1.add( roue1 );
 	
 	const liaison1 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,0.8+2*lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	liaison1.position.set(0,-(0.8+2*lRoue)/2+lRoue,0);
@@ -276,44 +276,42 @@ function buildAvion(sceneGraph,pickingData){
 	
 	const roue2 = new THREE.Mesh( new THREE.CylinderGeometry( rRoue,rRoue,lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	roue2.rotateX(Math.PI/2);
-	roue2.position.set(0,rRoue/2+0.2,LFront-0.8);
-	aile2.add( roue2 );
+	roue2.position.set(0,-(rRoue/2+0.2),LFront-0.8);
+	aile1.add( roue2 );
 	
 	const roue3 = new THREE.Mesh( new THREE.CylinderGeometry( rRoue,rRoue,lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	roue3.rotateX(Math.PI/2);
-	roue3.position.set(0,-(-rRoue/2-0.2),-LFront);
-	aile2.add( roue3 );
+	roue3.position.set(0,(-rRoue/2-0.2),-LFront);
+	aile1.add( roue3 );
 	
 	const roue4 = new THREE.Mesh( new THREE.CylinderGeometry( rRoue,rRoue,lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	roue4.rotateX(Math.PI/2);
-	roue4.position.set(0,-(-rRoue/2-0.2),-LFront+0.8);
-	aile2.add( roue4 );
+	roue4.position.set(0,(-rRoue/2-0.2),-LFront+0.8);
+	aile1.add( roue4 );
 	
 	const liaison2 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,0.8+2*lRoue,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
 	liaison2.position.set(0,-(0.8+2*lRoue)/2+lRoue,0);
 	roue4.add( liaison2);
 	
 	const liaisonH1 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,rRoue+0.1,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
-	liaisonH1.position.set(0,0.2,(rRoue+0.1)/2);
+	liaisonH1.position.set(0,0.2,-(rRoue+0.1)/2);
 	liaisonH1.rotateX(Math.PI/2);
 	liaison2.add( liaisonH1);
 	
 	const liaisonH2 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,rRoue+0.1,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
-	liaisonH2.position.set(0,-0.2,(rRoue+0.1)/2);
+	liaisonH2.position.set(0,-0.2,-(rRoue+0.1)/2);
 	liaisonH2.rotateX(Math.PI/2);
 	liaison2.add( liaisonH2);
 	
 	const liaisonH3 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,rRoue+0.1,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
-	liaisonH3.position.set(0,0.2,(rRoue+0.1)/2);
+	liaisonH3.position.set(0,0.2,-(rRoue+0.1)/2);
 	liaisonH3.rotateX(Math.PI/2);
 	liaison1.add( liaisonH3);
 	
 	const liaisonH4 = new THREE.Mesh( new THREE.CylinderGeometry( r,r,rRoue+0.1,32 ), MaterialRGB(0.3,0.3,0.3) ) ;
-	liaisonH4.position.set(0,-0.2,(rRoue+0.1)/2);
+	liaisonH4.position.set(0,-0.2,-(rRoue+0.1)/2);
 	liaisonH4.rotateX(Math.PI/2);
 	liaison1.add( liaisonH4);
-	
-	aile1.rotateY(Math.PI);
 }
 
 function pilier(aile1, r, h, pos){

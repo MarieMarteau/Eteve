@@ -80,7 +80,7 @@ function init3DObjects(sceneGraph, pickingData) {
 
 	buildAvion(sceneGraph, pickingData);
 	const aile1 = sceneGraph.getObjectByName("aile1");
-	aile1.position.set(2,0.6,0);
+	aile1.position.set(-1,0,0);
 	
 }
 
@@ -100,7 +100,7 @@ function animate(sceneThreeJs, time,pickingData) {
 	
 	if(-Math.PI/6<Math.pow(1.5,t)*0.01*Math.sin(t) && Math.pow(1.5,t)*0.01*Math.sin(t)< Math.PI/6){
 	
-		skyBox.rotateY(0.3/Math.pow(1.7,t));
+		skyBox.rotateY(-0.3/Math.pow(1.7,t));
 		aile1.rotation.x = Math.pow(1.5,t)*0.01*Math.sin(t);
 	}
 	else{

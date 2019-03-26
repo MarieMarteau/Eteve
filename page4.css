@@ -21,15 +21,6 @@ body{
 	
 }
 
-#bas{
-	height:40px;
-	position:absolute;
-	right:10%;
-	bottom:10%;
-	border:none;
-	outline:none;
-}
-
 @keyframes apparition {
   from {
         opacity:0;         
@@ -68,4 +59,46 @@ body{
 	position:absolute;
 	left:2%;
 	top:2%;
+}
+
+#next{
+	position:absolute;
+	width:20%;
+	right:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	font-size:18px;
+}
+
+
+#page2{
+}
+#fleche2{
+	position:absolute;
+	width:30%;
+	right:0%;
+	bottom:0%;
+	visibility:visible;
+}
+
+#prev{
+	visibility:visible;
+	position:absolute;
+	width:20%;
+	left:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	text-align:right;
+	font-size:18px;
+}
+
+#flechePrev{
+	position:absolute;
+	width:30%;
+	left:0%;
+	bottom:0%;
 }

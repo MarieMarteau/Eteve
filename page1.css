@@ -45,13 +45,12 @@ iframe{
 	top:-20%;
 	border:none;
 	outline:none;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 3s;
-	animation-fill-mode:forwards;
-	animation-delay:6s;
+	visibility:hidden;
 }
 
+#avionSeul { 
+	visibility:hidden;
+}
 
 #ContainerTexte1 { 
 	width:100%;
@@ -68,33 +67,23 @@ iframe{
 	font-family:Timeless;
 	text-align:center;
 	font-size:25px;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 1s;
-	animation-fill-mode:forwards;
-	animation-delay:6s;
+	visibility:hidden;
 }
 
 #Texte1{
+	visibility:hidden;
 	width:100%;
 	position:absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	opacity:0;
-	animation-name: apparition;
-	animation-duration: 7s;
-	animation-delay:6s;
 }
 
 #Texte2{
+	visibility:hidden;
 	width:100%;
 	position:absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	opacity:0;
-	animation-name: apparition;
-	animation-duration: 6s;
-	animation-delay:13s;
 }
 
 #Texte3{
@@ -102,32 +91,23 @@ iframe{
 	position:absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	opacity:0;
-	animation-name: apparition;
-	animation-duration: 6.5s;
-	animation-delay:19s;
+	visibility:hidden;
 }
 
 #trainee{
 	height:7%;
 	position:absolute;
-	top: 40%;
-	right:4%;
-	opacity:0;
-	animation-name: apparition;
-	animation-duration: 6.5s;
-	animation-delay:19s;
+	top: 20%;
+	left:4%;
+	visibility:hidden;
 }
 
 #trainee2{
 	height:7%;
 	position:absolute;
-	top: 30%;
-	right:4%;
-	opacity:0;
-	animation-name: apparition;
-	animation-duration: 6.5s;
-	animation-delay:19s;
+	top: 35%;
+	left:4%;
+	visibility:hidden;
 }
 
 #Texte4{
@@ -135,33 +115,21 @@ iframe{
 	position:absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 2s;
-	animation-fill-mode:forwards;
-	animation-delay:25.5s;
+	visibility:hidden;
 }
 #portance{
 	width:3.5%;
 	position:absolute;
 	left: 50%;
-	top:35%;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 2s;
-	animation-fill-mode:forwards;
-	animation-delay:25.5s;
+	top:30%;
+	visibility:hidden;
 }
 #portance2{
 	width:3.5%;
 	position:absolute;
-	left: 40%;
-	top:35%;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 2s;
-	animation-fill-mode:forwards;
-	animation-delay:25.5s;
+	left: 60%;
+	top:30%;
+	visibility:hidden;
 }
 
 #Titre{
@@ -174,25 +142,55 @@ iframe{
 	font-family:Timeless;
 	font-size:50px;
 	text-align:center;
-	opacity:1;
-	animation-name: disparition;
-	animation-duration: 2s;
-	animation-fill-mode: forwards;
-	animation-delay:4s;
+	visibility:visible;
 }
 
 #next{
-	height:40px;
 	position:absolute;
-	right:10%;
-	bottom:10%;
+	width:20%;
+	right:5%;
+	bottom:3%;
 	border:none;
 	outline:none;
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-duration: 2s;
-	animation-fill-mode:forwards;
-	animation-delay:25.5s;
+	font-family:Timeless;
+	font-size:18px;
+}
+
+#flecheNext{
+	position:absolute;
+	width:30%;
+	right:0%;
+	bottom:0%;
+	visibility:visible;
+}
+#page2{
+}
+#fleche2{
+	position:absolute;
+	width:30%;
+	right:0%;
+	bottom:0%;
+	visibility:hidden;
+}
+
+#prev{
+	visibility:hidden;
+	position:absolute;
+	width:20%;
+	left:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	text-align:right;
+	font-size:18px;
+}
+
+#flechePrev{
+	position:absolute;
+	width:30%;
+	left:0%;
+	bottom:0%;
 }
 
 #home{

@@ -1,0 +1,13 @@
+Modifications apportées :
+
+- après le test de Marie-Paule Cani :
+	- appuyer sur la flèche et pas sur la plaque
+	- insister sur X
+	
+	
+	précédent
+	vert = correct
+	taille police
+	valeur de référence
+	sens !!
+	fin

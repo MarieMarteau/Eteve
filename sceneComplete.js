@@ -82,7 +82,7 @@ function init3DObjects(sceneGraph, pickingData) {
 	buildAvion(sceneGraph, pickingData);
 	
 	const aile1=sceneGraph.getObjectByName("aile1");
-	aile1.position.set(2,2,0);
+	aile1.position.set(-1,2,0);
 	initEteve2(sceneGraph);
 	
 	
@@ -122,7 +122,7 @@ function render( sceneThreeJs ) {
 function animate(sceneThreeJs, time,pickingData) {
 	
 	const t = time/1000;//time in second
-	const hAv = 2.8;
+	const hAv = 2;
 	const rotAv = Math.PI/20;
 	const skyBox = sceneThreeJs.sceneGraph.getObjectByName("skyBox");
 	const levier = sceneThreeJs.sceneGraph.getObjectByName("levier");
@@ -134,43 +134,43 @@ function animate(sceneThreeJs, time,pickingData) {
 	const angle = Math.atan((levier.position.x-cylindre.position.x)/(levier.position.y-cylindre.position.y));
 	tigeV.rotation.z = -angle/7+0.003*Math.sin(10*t);
 	if (angle>=-Math.PI/2&& angle<-2*Math.PI/6){
-		skyBox.rotateY(0.001);
+		skyBox.rotateY(-0.001);
 		aile1.rotation.x =rotAv+ 0.01*Math.sin(5*t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 0.90;
 	}
 	else if (angle>-2*Math.PI/6&& angle<-Math.PI/6){
-		skyBox.rotateY(0.006);
+		skyBox.rotateY(-0.006);
 		aile1.rotation.x = rotAv+0.01*Math.sin(3*t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 0.95;
 	}
 	else if (angle>-Math.PI/6&& angle<0){
-		skyBox.rotateY(0.01);
+		skyBox.rotateY(-0.01);
 		aile1.rotation.x = rotAv+0.01*Math.sin(t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 0.97;
 	}
 	else if (angle>=0&& angle<Math.PI/6){
-		skyBox.rotateY(0.02);
+		skyBox.rotateY(-0.02);
 		aile1.rotation.x = rotAv+0.01*Math.sin(t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 1;
 	}
 	else if (angle>Math.PI/6&& angle<2*Math.PI/6){
-		skyBox.rotateY(0.03);
+		skyBox.rotateY(-0.03);
 		aile1.rotation.x = rotAv+0.01*Math.sin(t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 1.05;
 	}
 	else if (angle>2*Math.PI/6){
-		skyBox.rotateY(0.05);
+		skyBox.rotateY(-0.05);
 		aile1.rotation.x = rotAv+0.01*Math.sin(t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 		ressort.scale.y = 1.1;
 	}
 	else{
-		skyBox.rotateY(0.02);
+		skyBox.rotateY(-0.02);
 		aile1.rotation.x = rotAv+0.01*Math.sin(t);
 		aile1.position.y = hAv+0.01*Math.sin(10*t);
 	}

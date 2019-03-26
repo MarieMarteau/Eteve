@@ -85,18 +85,41 @@ function init3DObjects(sceneGraph, pickingData) {
 	
 	const plaque = sceneGraph.getObjectByName("plaque");
 	
-	const basGeometry = new THREE.CylinderGeometry(0.15,0.15,0.3,32);
-	const bas = new THREE.Mesh(basGeometry,new THREE.MeshLambertMaterial({color:0xd1b9f9}));
-	bas.rotateZ(-Math.PI/2);
-	bas.name="bas";
-	bas.position.x=-1;
-	plaque.add(bas);
+	let pts1=[];
+	const l1 = 0.15;
+	const l2 = 0.3;
+	const l3 = 0.1;
+	const l4 = 0.3;
+    pts1.push(new THREE.Vector2(0,l1));
+	pts1.push(new THREE.Vector2(l2,l1));
+	pts1.push(new THREE.Vector2(l2,l1+l3));
+	pts1.push(new THREE.Vector2(l2+l4,0));
+	pts1.push(new THREE.Vector2(l2,-l1-l3));
+	pts1.push(new THREE.Vector2(l2,-l1));
+	pts1.push(new THREE.Vector2(0,-l1));
+	pts1.push(new THREE.Vector2(0,l1));
+    const shape1 = new THREE.Shape( pts1 );
 	
-	const hautGeometry = new THREE.CylinderGeometry(0,0.35,0.3,32);
-	const haut = new THREE.Mesh(hautGeometry,new THREE.MeshLambertMaterial({color:0xd1b9f9}));
-	bas.add(haut);
-	haut.name="haut";
-	haut.position.y=0.3/2+0.3/2;
+    let Points1 = [];
+	Points1.push( new THREE.Vector3(0,0,-0.15));
+	Points1.push( new THREE.Vector3(0,0,0.15));
+    const Spline1 =  new THREE.CatmullRomCurve3( Points1 );
+
+    const extrudeSettings1 = {
+	steps: 150,
+	bevelEnabled: false,
+	extrudePath: Spline1
+};
+
+    const extrudeGeometry1 = new THREE.ExtrudeBufferGeometry( shape1, extrudeSettings1 );
+    const fleche = new THREE.Mesh( extrudeGeometry1,new THREE.MeshLambertMaterial({color:0xd1b9f9})) ;
+    fleche.material.side = THREE.DoubleSide; 
+	fleche.name = "fleche";
+	fleche.rotateZ(Math.PI/2);
+	fleche.translateY(0.6+l2+l4);
+    plaque.add( fleche );
+	pickingData.selectableObjects.push(fleche);
+	
 }
 
 
@@ -151,6 +174,7 @@ function animate(sceneThreeJs, time,pickingData) {
 	const plaque = sceneThreeJs.sceneGraph.getObjectByName("plaque");
 	const tigeV = sceneThreeJs.sceneGraph.getObjectByName("tigeV");
 	const ressort =sceneThreeJs.sceneGraph.getObjectByName("ressort");
+	const fleche =sceneThreeJs.sceneGraph.getObjectByName("fleche");
 	let angle = tigeV.rotation.z;
 	const bas = sceneThreeJs.sceneGraph.getObjectByName("bas");
 	const reduz = 1.0045;
@@ -160,18 +184,18 @@ function animate(sceneThreeJs, time,pickingData) {
 	if (pickingData.descente&&angle>-Math.PI/10 ){
 		tigeV.rotateZ(-0.002);
 		angle = plaque.rotation.z;
-		bas.scale.y = bas.scale.y*reduz;
-		bas.scale.x = bas.scale.x*reduz;
-		bas.scale.z = bas.scale.z*reduz;
+		fleche.scale.y = fleche.scale.y*reduz;
+		fleche.scale.x = fleche.scale.x*reduz;
+		fleche.scale.z = fleche.scale.z*reduz;
 		ressort.scale.y = ressort.scale.y*reduzRess;
 	}
 	
 	if (pickingData.remontee&&angle<0){
 		tigeV.rotateZ(0.002);
 		angle = plaque.rotation.z;
-		bas.scale.y = bas.scale.y/reduz;
-		bas.scale.x = bas.scale.x/reduz;
-		bas.scale.z = bas.scale.z/reduz;
+		fleche.scale.y = fleche.scale.y/reduz;
+		fleche.scale.x = fleche.scale.x/reduz;
+		fleche.scale.z = fleche.scale.z/reduz;
 		ressort.scale.y = ressort.scale.y/reduzRess;
 	}
     render(sceneThreeJs);
