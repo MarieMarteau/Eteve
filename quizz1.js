@@ -2,6 +2,8 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next');
+const page6 = document.getElementById('page6');
+const fleche6 = document.getElementById('fleche6');
 const body = document.getElementsByTagName('body');
 
 
@@ -90,6 +92,8 @@ function showResults(){
   
   submitButton.style.visibility='hidden';
   nextButton.style.visibility='visible';
+  page6.style.visibility='visible';
+  fleche6.style.visibility='visible';
 
 }
 

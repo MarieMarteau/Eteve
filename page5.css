@@ -16,7 +16,7 @@ body{
 	background-size: cover;
 	font-family:Timeless;
 	text-align:center;
-	font-size:18px;
+	font-size:20px;
 	
 	
 }
@@ -55,12 +55,26 @@ body{
 }
 
 #next{
-	height:40px;
 	position:absolute;
-	right:10%;
-	bottom:10%;
+	width:20%;
+	right:5%;
+	bottom:3%;
 	border:none;
 	outline:none;
+	font-family:Timeless;
+	font-size:18px;
+	visibility:hidden;
+}
+
+
+#page6{
+	visibility:hidden;
+}
+#fleche6{
+	position:absolute;
+	width:30%;
+	right:0%;
+	bottom:0%;
 	visibility:hidden;
 }
 
@@ -76,7 +90,7 @@ body{
 	bottom: 10%;
 	right:5%;
 	font-family:Timeless;
-	font-size:16px;
+	font-size:18px;
 }
 
 #home{
@@ -84,4 +98,24 @@ body{
 	position:absolute;
 	left:2%;
 	top:2%;
+}
+
+#prev{
+	visibility:visible;
+	position:absolute;
+	width:20%;
+	left:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	text-align:right;
+	font-size:18px;
+}
+
+#flechePrev{
+	position:absolute;
+	width:30%;
+	left:0%;
+	bottom:0%;
 }
