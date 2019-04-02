@@ -86,7 +86,9 @@ iframe{
 }
 
 #Texte1{
-	margin-top:2%;
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
 	opacity:0;
 	animation-name: apparitionStay;
 	animation-fill-mode:forwards;

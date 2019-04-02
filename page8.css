@@ -44,30 +44,6 @@ body{
 	transform: translateY(-50%);
 }
 
-#next{
-	position:absolute;
-	width:20%;
-	right:5%;
-	bottom:3%;
-	border:none;
-	outline:none;
-	font-family:Timeless;
-	font-size:18px;
-	visibility:hidden;
-}
-
-
-#page8{
-	visibility:hidden;
-}
-#fleche8{
-	position:absolute;
-	width:30%;
-	right:0%;
-	bottom:0%;
-	visibility:hidden;
-}
-
 @keyframes apparition {
   from {
         opacity:0;         
@@ -107,7 +83,8 @@ body{
 	visibility:visible;
 	text-align:center;
 	position:absolute;
-	top: 5%;
+	top: 50%;
+	transform:translateY(-50%);
 }
 #bloc1{
 	width:100%;
@@ -156,5 +133,38 @@ body{
 	position:absolute;
 	width:30%;
 	left:0%;
+	bottom:0%;
+}
+
+#next{
+	position:absolute;
+	width:20%;
+	right:5%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	font-size:18px;
+}
+
+#felicitation{
+	position:absolute;
+	width:100%;
+	right:15%;
+	bottom:3%;
+	border:none;
+	outline:none;
+	font-family:Timeless;
+	font-size:18px;
+	text-align:right;
+}
+
+
+#page1{
+}
+#fleche1{
+	position:absolute;
+	width:30%;
+	right:0%;
 	bottom:0%;
 }

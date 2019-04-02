@@ -4,6 +4,9 @@ const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next');
 const page6 = document.getElementById('page6');
 const fleche6 = document.getElementById('fleche6');
+const Texte1 = document.getElementById('Texte1');
+const bravo = document.getElementById('bravo');
+const faux = document.getElementById('faux');
 const body = document.getElementsByTagName('body');
 
 
@@ -11,10 +14,10 @@ const myQuestions = [
   {
     question: "",
     answers: {
-      a: "Lorsque la vitesse diminue, la force de traînée augmente.",
-      b: "Lorsque la vitesse diminue, la force de traînée diminue.",
+      a: "Lorsque la vitesse augmente, la force de traînée augmente.",
+      b: "Lorsque la vitesse augmente, la force de traînée diminue.",
     },
-    correctAnswer: "b"
+    correctAnswer: "a"
   }
   ]
 
@@ -78,18 +81,28 @@ function showResults(){
       numCorrect++;
 
       // color the answers green
-      answerContainers[questionNumber].style.color = '#009100';
+      //answerContainers[questionNumber].style.color = '#009100';
 	  
     }
     // if answer is wrong or blank
     else{
       // color the answers red
-      answerContainers[questionNumber].style.color = '#D40000';
+      //answerContainers[questionNumber].style.color = '#D40000';
     }
   });
 
   // show number of correct answers out of total
+  if (numCorrect==myQuestions.length){
+	bravo.style.visibility='visible';
+  }
+  else if(numCorrect==0){
+	  faux.style.visibility='visible';
+  }
+  else{
+	 faux.style.visibility='visible';
+  }
   
+  Texte1.style.visibility='hidden';
   submitButton.style.visibility='hidden';
   nextButton.style.visibility='visible';
   page6.style.visibility='visible';
