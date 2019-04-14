@@ -53,6 +53,25 @@ body{
 	top: 50%;
 	transform: translateY(-50%);
 }
+#bravo{
+	color:#009100;
+	visibility:hidden;
+	width:100%;
+	position:absolute;
+	top: 50%;
+	font-size:25px;
+	transform: translateY(-50%);
+}
+#faux{
+	color:#D40000;
+	font-size:25px;
+	visibility:hidden;
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 
 #next{
 	position:absolute;

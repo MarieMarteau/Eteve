@@ -2,8 +2,9 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const nextButton = document.getElementById('next');
-const Parag1 = document.getElementById('Parag1');
-const Parag2 = document.getElementById('Parag2');
+const fleche8 = document.getElementById('fleche8');
+const page8 = document.getElementById('page8');
+const bloc1 = document.getElementById('bloc1');
 const body = document.getElementsByTagName('body');
 
 
@@ -87,12 +88,23 @@ function showResults(){
       answerContainers[questionNumber].style.color = '#D40000';
     }
   });
-
-  // show number of correct answers out of total
   
-  Parag1.style.visibility='hidden';
+  // show number of correct answers out of total
+  if (numCorrect==myQuestions.length){
+	bravo.style.visibility='visible';
+  }
+  else if(numCorrect==0){
+	  faux.style.visibility='visible';
+  }
+  else{
+	 faux.style.visibility='visible';
+  }
+  
+  bloc1.style.visibility='hidden';
   submitButton.style.visibility='hidden';
-  Parag2.style.visibility='visible';
+  nextButton.style.visibility='visible';
+  page8.style.visibility='visible';
+  fleche8.style.visibility='visible';
 
 }
 

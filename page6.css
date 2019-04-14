@@ -67,15 +67,13 @@ body {
 }
 
 #Texte1{
-	margin-top:2%;
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #Texte2{
-	opacity:0;
-	animation-name: apparitionStay;
-	animation-fill-mode:forwards;
-	animation-duration: 4s;
-	animation-delay:3s;
 }
 
 #Texte3{

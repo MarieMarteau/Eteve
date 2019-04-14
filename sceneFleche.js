@@ -222,7 +222,7 @@ function initEmptyScene(sceneThreeJs) {
     sceneThreeJs.renderer = sceneInit.createRenderer();
     sceneInit.insertRenderInHtml(sceneThreeJs.renderer.domElement);
 
-    sceneThreeJs.controls = new THREE.OrbitControls( sceneThreeJs.camera );
+    //sceneThreeJs.controls = new THREE.OrbitControls( sceneThreeJs.camera );
 
     window.addEventListener('resize', function(event){onResize(sceneThreeJs);}, false);
 }
